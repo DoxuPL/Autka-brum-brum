@@ -1,165 +1,220 @@
-/* Resetowanie stylów */
+/* Global styles */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
-/* Globalne style dla strony */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #333;
-  background-color: #f2f2f2;
+  margin: 0;
 }
 
-h1,
-h2 {
-  font-weight: 600;
-  text-align: center;
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
 }
 
-p {
-  margin-bottom: 1rem;
+/* Header styles */
+header {
+  background-color: #282828;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-ul {
+nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-a {
-  color: #333;
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  color: #fff;
   text-decoration: none;
-  cursor: pointer;
+  transition: color 0.2s;
 }
 
-/* Stylowanie nagłówka */
-header {
-  background-color: #f1c40f;
-  padding: 2rem;
-  text-align: center;
-  position: relative;
+nav a:hover {
+  color: #f9bc60;
 }
 
-h1 {
-  font-size: 3rem;
-  text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
-  animation: glow 2s ease-in-out infinite alternate;
+/* Main styles */
+main {
+  margin-top: 80px;
 }
 
-@keyframes glow {
-  from {
-    text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
-  }
-  to {
-    text-shadow: 4px 4px 0 rgba(0,0,0,0.2);
-  }
-}
-
-/* Stylowanie listy samochodów */
-#cars-list {
-  background-color: #fff;
-  padding: 2rem;
+section {
   margin: 2rem 0;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#cars-list h2 {
-  margin-bottom: 1rem;
+section h2 {
+  font-size: 2rem;
+  margin-top: 0;
 }
 
-#cars-list li {
-  margin-bottom: 0.5rem;
+section p {
+  margin: 1rem 0;
+  font-size: 1.1rem;
 }
 
-#cars-list li:hover {
-  background-color: #f9f9f9;
-  cursor: pointer;
-  transform: scale(1.05);
-  transition: transform 0.2s ease-in-out;
+/* Welcome section */
+.buy-any-car-section {
+  background-color: #f9bc60;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-/* Stylowanie galerii */
+.buy-any-car-section p:first-child {
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.buy-any-car-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* Mercedes section */
+.buy-mercedes-section {
+  background-color: #282828;
+  color: #fff;
+}
+
+.buy-mercedes-section p {
+  font-size: 1.2rem;
+}
+
+/* FAQ section */
+.faq-section {
+  background-color: #f3f3f3;
+  color: #333;
+}
+
+/* For companies section */
+.for-companies-section {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Contact section */
+.contact-section {
+  background-color: #f9bc60;
+  color: #fff;
+  text-align: center;
+}
+
+.contact-section p {
+  margin-bottom: 0;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+/* Animations */
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.buy-any-car-section, .buy-mercedes-section, .faq-section, .for-companies-section, .contact-section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0,1s
+}
 .gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
+  margin: 20px;
 }
 
-.gallery img {
-  width: 200px;
-  height: 200px;
-  margin: 0.5rem;
-  border-radius: 50%;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-  object-fit: cover;
-  transition: all 0.2s ease-in-out;
-}
-
-.gallery img:hover {
-  transform: scale(1.1) rotate(10deg);
-  box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
-}
-
-/* Stylowanie sekcji kontaktowej */
-#contact-info {
-  background-color: #f1c40f;
-  padding: 2rem;
-  text-align: center;
+.gallery-item {
   position: relative;
-}
-
-#contact-info h2 {
-  margin-bottom: 1rem;
-}
-
-.call-button {
-  background-color: #2ecc71;
-  color: #fff;
-  padding: 1rem 2rem;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  text-transform:uppercase;
-  margin-top: 1rem;
+  margin: 10px;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  }
-  
-  .call-button:hover {
-  background-color: #27ae60;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-  transform: translateY(-2px);
-  }
-  
-  /* Stylowanie stopki */
-  footer {
-  background-color: #333;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.gallery-item:hover::before {
+  opacity: 1;
+}
+
+.gallery-item::after {
+  content: "\f002";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: FontAwesome;
+  font-size: 40px;
   color: #fff;
-  padding: 1rem;
-  text-align: center;
-  }
-  
-  footer p {
-  margin-bottom: 0;
-  }
-  
-  /* Responsive design */
-  @media screen and (max-width: 768px) {
-  #cars-list {
-  padding: 1rem;
-  }
-  
-  .gallery img {
-  width: 150px;
-  height: 150px;
-  }
-  
-  #contact-info {
-  padding: 1rem;
-  }
-  }
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s;
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
