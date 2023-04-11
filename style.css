@@ -27,27 +27,45 @@ header {
   z-index: 1000;
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 20px;
+}
+
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
 nav li {
-  margin: 0 1rem;
+  margin: 0 20px;
 }
 
 nav a {
   color: #fff;
   text-decoration: none;
-  transition: color 0.2s;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
 }
 
 nav a:hover {
   color: #f9bc60;
+  background-color: #fff;
+}
+
+
 }
 
 /* Main styles */
@@ -83,16 +101,22 @@ section p {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 50px;
 }
 
 .buy-any-car-section p:first-child {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-top: 0;
+  margin-bottom: 30px;
+  font-weight: bold;
 }
 
 .buy-any-car-section p:last-child {
   margin-bottom: 0;
+  font-size: 1.2rem;
+  font-style: italic;
 }
+
 
 /* Mercedes section */
 .buy-mercedes-section {
