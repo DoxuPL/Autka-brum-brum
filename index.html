@@ -4,10 +4,49 @@
 	<meta charset="UTF-8">
 	<title>Kupię samochody</title>
 	<link rel="stylesheet" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function(event) { 
+			let header = document.querySelector('header h1');
+			let text = header.textContent;
+			header.innerHTML = '';
+			let chars = text.split('');
+			chars.forEach((char) => {
+			  let span = document.createElement('span');
+			  span.textContent = char;
+			  header.appendChild(span);
+			});
+			let anim = anime.timeline({loop: true})
+			  .add({
+			    targets: 'header h1 span',
+			    opacity: [0,1],
+			    easing: "easeInOutQuad",
+			    duration: 2250,
+			    delay: (el, i) => 150 * (i+1)
+			  }).add({
+			    targets: 'header h1 span',
+			    opacity: [1,0],
+			    easing: "easeInOutQuad",
+			    duration: 2250,
+			    delay: (el, i) => 150 * (i+1)
+			  });
+		});
+	</script>
+</head>
+<body>
+	<header>
+	</style>
 </head>
 <body>
 	<header>
 		<h1>Kupię samochody</h1>
+		<div class="animated-heading">
+			<h2>
+				<span>Kupię</span>
+				<span>Twoje</span>
+				<span>Auto</span>
+			</h2>
+		</div>
 		<p>Zakupię auta w każdym stanie. Sprawne, uszkodzone, skorodowane, bez opłat itp.</p>
 	</header>
 	<main>
@@ -37,19 +76,18 @@
 				<li>Mercedes Actros</li>
 				<li>Mercedes Axor</li>
 			</ul>
-            <div class="gallery">
-                <img src="zdjecie1.jpg" alt="Zdjęcie 1">
-                <img src="zdjecie2.jpg" alt="Zdjęcie 2">
-                <img src="zdjecie3.jpg" alt="Zdjęcie 3">
-                <img src="zdjecie4.jpg" alt="Zdjęcie 4">
-                <!-- Dodaj więcej zdjęć tutaj -->
-              </div>
-              
+			<div class="gallery">
+				<img src="zdjecie1.jpg" alt="Zdjęcie 1">
+				<img src="zdjecie2.jpg" alt="Zdjęcie 2">
+				<img src="zdjecie3.jpg" alt="Zdjęcie 3">
+				<img src="zdjecie4.jpg" alt="Zdjęcie 4">
+				<!-- Dodaj więcej zdjęć tutaj -->
+			</div>
 		</section>
 		<section id="contact-info">
 			<h2>Kontakt:</h2>
 			<a href="tel:+48123456789" class="call-button">Zadzwoń teraz!</a>
- 		</section>
+		</section>
 	</main>
 	<footer>
 		<p>&copy; Kupię samochody 2023</p>
