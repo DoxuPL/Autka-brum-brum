@@ -101,16 +101,22 @@ section p {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 50px;
 }
 
 .buy-any-car-section p:first-child {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-top: 0;
+  margin-bottom: 30px;
+  font-weight: bold;
 }
 
 .buy-any-car-section p:last-child {
   margin-bottom: 0;
+  font-size: 1.2rem;
+  font-style: italic;
 }
+
 
 /* Mercedes section */
 .buy-mercedes-section {
