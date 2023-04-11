@@ -52,10 +52,17 @@ nav a {
   color: #fff;
   text-decoration: none;
   transition: color 0.2s;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
 }
 
 nav a:hover {
   color: #f9bc60;
+  background-color: #fff;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
 }
 
 }
