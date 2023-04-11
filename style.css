@@ -1,5 +1,5 @@
 /* Global styles */
-{
+* {
   box-sizing: border-box;
 }
 
@@ -27,6 +27,54 @@ header {
   z-index: 1000;
 }
 
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #f9bc60;
+}
+
+/* Main styles */
+main {
+  margin-top: 80px;
+}
+
+section {
+  margin: 2rem 0;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+section p {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+/* Welcome section */
 .buy-any-car-section {
   background-color: #f9bc60;
   color: #fff;
@@ -35,103 +83,49 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 50px;
 }
 
-.buy-any-car-section h2 {
-  font-size: 2rem;
+.buy-any-car-section p:first-child {
+  font-size: 1.5rem;
   margin-top: 0;
-  margin-bottom: 30px;
-  font-weight: bold;
 }
 
-.buy-any-car-section p {
-  font-size: 1.2rem;
-  line-height: 1.5;
+.buy-any-car-section p:last-child {
+  margin-bottom: 0;
 }
-
 
 /* Mercedes section */
 .buy-mercedes-section {
   background-color: #282828;
   color: #fff;
-  padding: 50px;
-}
-
-.buy-mercedes-section h2 {
-  font-size: 2rem;
-  margin-top: 0;
-  margin-bottom: 30px;
-  font-weight: bold;
 }
 
 .buy-mercedes-section p {
   font-size: 1.2rem;
-  line-height: 1.5;
 }
-
 
 /* FAQ section */
 .faq-section {
   background-color: #f3f3f3;
   color: #333;
-  padding: 50px;
 }
-
-.faq-section h2 {
-  font-size: 2rem;
-  margin-top: 0;
-  margin-bottom: 30px;
-  font-weight: bold;
-}
-
-.faq-section p {
-  font-size: 1.2rem;
-  line-height: 1.5;
-}
-
 
 /* For companies section */
 .for-companies-section {
   background-color: #fff;
   color: #333;
-  padding: 50px;
 }
-
-.for-companies-section h2 {
-  font-size: 2rem;
-  margin-top: 0;
-  margin-bottom: 30px;
-  font-weight: bold;
-}
-
-.for-companies-section p {
-  font-size: 1.2rem;
-  line-height: 1.5;
-}
-
 
 /* Contact section */
 .contact-section {
   background-color: #f9bc60;
   color: #fff;
   text-align: center;
-  padding: 50px;
-}
-
-.contact-section h2 {
-  font-size: 2rem;
-  margin-top: 0;
-  margin-bottom: 30px;
-  font-weight: bold;
 }
 
 .contact-section p {
-  font-size: 1.2rem;
-  line-height: 1.5;
   margin-bottom: 0;
 }
-
 
 /* Footer styles */
 footer {
@@ -143,8 +137,8 @@ footer {
 
 footer p {
   margin-bottom: 0;
-  font-size: 0.8rem;
 }
+
 /* Animations */
 section {
   opacity: 0;
