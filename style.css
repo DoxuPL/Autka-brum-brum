@@ -1,32 +1,35 @@
 /* Global styles */
-* {
-  box-sizing: border-box;
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
 }
-
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 0;
+font-family: 'Open Sans', sans-serif;
+font-size: 18px;
+line-height: 1.6;
 }
 
 .container {
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 1rem;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
 }
 
 /* Header styles */
 header {
-  background-color: #282828;
-  color: #fff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
+background-color: #282828;
+color: #fff;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1000;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px;
 }
-
 nav {
   display: flex;
   justify-content: space-between;
