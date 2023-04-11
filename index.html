@@ -1,96 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Skup samochodów - SkupToyot.pl</title>
 	<meta charset="UTF-8">
-	<title>Kupię samochody</title>
+	<meta name="description" content="Skupujemy każdą Toyotę z lat 1985-2017 oraz Mercedesy 190 z silnikiem diesla 2.0 oraz 2,5 w idealnym stanie jak również do remontu.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-	<script>
-		document.addEventListener("DOMContentLoaded", function(event) { 
-			let header = document.querySelector('header h1');
-			let text = header.textContent;
-			header.innerHTML = '';
-			let chars = text.split('');
-			chars.forEach((char) => {
-			  let span = document.createElement('span');
-			  span.textContent = char;
-			  header.appendChild(span);
-			});
-			let anim = anime.timeline({loop: true})
-			  .add({
-			    targets: 'header h1 span',
-			    opacity: [0,1],
-			    easing: "easeInOutQuad",
-			    duration: 2250,
-			    delay: (el, i) => 150 * (i+1)
-			  }).add({
-			    targets: 'header h1 span',
-			    opacity: [1,0],
-			    easing: "easeInOutQuad",
-			    duration: 2250,
-			    delay: (el, i) => 150 * (i+1)
-			  });
-		});
-	</script>
 </head>
 <body>
 	<header>
-	</style>
-</head>
-<body>
-	<header>
-		<h1>Kupię samochody</h1>
-		<div class="animated-heading">
-			<h2>
-				<span>Kupię</span>
-				<span>Twoje</span>
-				<span>Auto</span>
-			</h2>
-		</div>
-		<p>Zakupię auta w każdym stanie. Sprawne, uszkodzone, skorodowane, bez opłat itp.</p>
+		<nav>
+			<ul>
+				<li><a href="#toyot">Skup Toyot</a></li>
+				<li><a href="#toyot">Oferta skupu</a></li>
+				<li><a href="#">O nas</a></li>
+				<li><a href="#Mercedesa">Skup Mercedesa</a></li>
+				<li><a href="#toyot">Jakie Toyoty kupujemy</a></li>
+				<li><a href="#Pytania">Pytania i odpowiedzi</a></li>
+				<li><a href="#kontakt">Kontakt</a></li>
+			</ul>
+		</nav>
 	</header>
 	<main>
-		<section id="cars-list">
-			<h2>Lista kupowanych samochodów:</h2>
-			<ul>
-				<li>Toyota Corolla 1988-2010</li>
-				<li>Toyota Picnic Diesel Benzyne</li>
-				<li>Toyota Hilux</li>
-				<li>Toyota Avensis T22 on PB T25 PB</li>
-				<li>Toyota Carina</li>
-				<li>Toyota Dyna 150</li>
-				<li>Toyota Yaris 5D</li>
-				<li>Toyota RAV4</li>
-				<li>Toyota Avensis Verso Benzyne</li>
-				<li>Volkswagen Sharan MK1 1995-2000</li>
-				<li>Seat Alhambra MK1 1995-2000</li>
-				<li>Volkswagen LT Furgon Blaszak Stare, Nowe 5 cylindrów</li>
-				<li>Mercedes Sprinter do 2000r</li>
-				<li>Mercedes Kaczka</li>
-				<li>Mercedes Vario</li>
-				<li>Mercedes 814D</li>
-				<li>Mercedes MB100</li>
-				<li>Mercedes 608D</li>
-				<li>Mercedes 508D</li>
-				<li>Mercedes 1117</li>
-				<li>Mercedes Actros</li>
-				<li>Mercedes Axor</li>
-			</ul>
-			<div class="gallery">
-				<img src="zdjecie1.jpg" alt="Zdjęcie 1">
-				<img src="zdjecie2.jpg" alt="Zdjęcie 2">
-				<img src="zdjecie3.jpg" alt="Zdjęcie 3">
-				<img src="zdjecie4.jpg" alt="Zdjęcie 4">
-				<!-- Dodaj więcej zdjęć tutaj -->
+		<section id="welcome">
+			<section class="buy-any-car-section" id="Toyot">
+				<div class="container">
+					<h2>Kupimy każdą Toyotę</h2>
+					<p>Z LAT 1985 - 2017 Nowe jak również starsze modele Corolli, Avensisa , Cariny , Rav4 , Hiace, Land Cruisera, Dyny , Hiluxa itp...</p>
+					<p>Szybka gotówka</p>
+					<p>Transakcja możliwa w każdym dogodnym dla Państwa terminie...</p>
+					<p>Dojazd do Klienta</p>
+					<p>Nie pobieramy opłat za dojazd po auto do naszych klientów....</p>
+				</div>
+				<div class="gallery">
+					<div class="gallery-item">
+					  <img src="zdjecie1.jpg" alt="Image 1">
+					</div>
+					<div class="gallery-item">
+					  <img src="zdjecie2.jpg" alt="Image 2">
+					</div>
+					<div class="gallery-item">
+					  <img src="zdjecie3.jpg" alt="Image 3">
+					</div>
+				  </div>
+				  
+			</section>
+      		<section class="buy-mercedes-section" id="Mercedesa">
+			<div class="container">
+				<h2>Kupimy również Mercedesa</h2>
+				<p>Chętnie kupimy każdego Mercedesa 190 z silnikiem diesla 2.0 oraz 2,5.</p>
+				<p>W idealnym stanie jak również do remontu.</p>
+				<p>Uczciwe wynagrodzenie.</p>
 			</div>
 		</section>
-		<section id="contact-info">
-			<h2>Kontakt:</h2>
-			<a href="tel:+48123456789" class="call-button">Zadzwoń teraz!</a>
+
+		<section class="faq-section" id="Pytania">
+			<div class="container">
+				<h2>Masz pytanie? Przeczytaj zanim zadzwonisz</h2>
+				<p>Auto kupujemy od Państwa sporządzając umowę kupna-sprzedaży pojazdu. Nie negocjujemy cen ustalonych przez telefon. Rozumiemy, że każde auto posiada ślady użytkowania.</p>
+			</div>
 		</section>
-	</main>
-	<footer>
-		<p>&copy; Kupię samochody 2023</p>
-	</footer>
+
+		<section class="for-companies-section">
+  <div class="container">
+    <h2>Oferta dla firm i serwisów</h2>
+    <p>Chętnie kupimy auta z dużym przebiegiem, poleasingowe, po firmie.</p>
+    <p>Również proponujemy współpracę serwisom Toyoty, w których pozostawiają swoje auta nabywcy nowych modeli.</p>
+  </div>
+</section>
+<section class="contact-section" id="kontakt">
+  <div class="container">
+    <h2>Kontakt</h2>
+    <p>Skup samochodów</p>
+    <p>Tel: +48 666 490 167</p>
+  </div>
+</section>
+<footer>
+  <div class="container">
+    <p>&copy; 2023 SkupToyotiMercedesów Wszelkie prawa zastrzeżone.</p>
+  </div>
+</footer>
+<script src="main.js"></script>
 </body>
 </html>
+				
