@@ -94,6 +94,7 @@ section p {
 
 /* Welcome section */
 /* Buy any car section */
+/* Buy any car section */
 .buy-any-car-section {
   background-color: #f9bc60;
   color: #fff;
@@ -130,6 +131,8 @@ section p {
   margin-top: 0;
   margin-bottom: 30px;
   font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .buy-mercedes-section p {
@@ -150,6 +153,8 @@ section p {
   margin-top: 0;
   margin-bottom: 30px;
   font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .faq-section p {
@@ -170,6 +175,8 @@ section p {
   margin-top: 0;
   margin-bottom: 30px;
   font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .for-companies-section p {
@@ -191,6 +198,8 @@ section p {
   margin-top: 0;
   margin-bottom: 30px;
   font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .contact-section p {
@@ -205,12 +214,13 @@ footer {
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 1rem;
+  padding: 50px;
 }
 
 footer p {
   margin-bottom: 0;
-  font-size: 0.8rem;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 /* Animations */
